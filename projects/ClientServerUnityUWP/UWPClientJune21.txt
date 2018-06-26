@@ -1,0 +1,39 @@
+//this code works and connects from the HoloLens to the Python Server
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using System.Text;
+
+
+
+public class UWPConnect : MonoBehaviour {
+
+#if !UNITY_EDITOR
+    private Windows.Networking.Sockets.StreamSocket socket;
+#endif
+
+    private string ipAddress = "131.202.243.56";
+    private string port = "5555";
+
+    // Use this for initialization
+    void Start () {
+        UWPConnection();
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+
+    void UWPConnection(){
+#if !UNITY_EDITOR
+    socket = new Windows.Networking.Sockets.StreamSocket();
+    Windows.Networking.HostName serverHost = new Windows.Networking.HostName(ipAddress);
+    socket.ConnectAsync(serverHost, port);
+#endif
+    }
+
+}

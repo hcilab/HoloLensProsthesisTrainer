@@ -1,0 +1,82 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using System.IO;
+using System.Threading;
+using UnityEngine.Networking;
+//using System.Net.Sockets;
+//using System.Net;
+using System.Text;
+
+#if !UNITY_EDITOR
+using System.Threading.Tasks;
+#endif
+
+public class ClientScript : MonoBehaviour {
+
+#if !UNITY_EDITOR
+    private bool _useUWP = true;
+    private Windows.Networking.Sockets.StreamSocket socket;
+    private Task exchangeTask;
+#endif
+
+#if UNITY_EDITOR
+    private bool _useUWP = false;
+    System.Net.Sockets.TcpClient client;
+    System.Net.Sockets.NetworkStream stream;
+    System.Net.IPAddress ipAdress;
+    private Thread exchangeThread;
+#endif
+
+
+    //NetworkClient myClient;
+    public Text controllerPositions;
+    public string sampleText = "this is sample text to test the UI";
+    private string host = "131.202.243.56";
+    private int port = 5555;
+    TcpClient socketClient;
+
+    
+    
+
+    void Start()
+    {
+        ConnectSocket();
+        //ListenForData();
+        controllerPositions.text = sampleText;
+    }
+
+    private void Update()
+    {
+        ListenForData();
+    }
+
+
+    void ConnectSocket()
+    {
+        /*IPAddress*/ ipAddress = IPAddress.Parse(host);
+        socketClient = new TcpClient();
+        try
+        {
+            socketClient.Connect(ipAddress, port);
+            //Debug.Log("connected to server socket!");
+        }
+
+        catch
+        {
+            //Debug.Log("error connected to server socket");
+        }
+    }
+
+    void ListenForData()
+    {
+        int data;
+        byte[] bytes = new byte[socketClient.ReceiveBufferSize];
+        /*NetworkStream*/ stream = socketClient.GetStream();
+        data = stream.Read(bytes, 0, socketClient.ReceiveBufferSize);
+        string dataString = Encoding.ASCII.GetString(bytes, 0, data);
+        //Debug.Log("data: " + dataString);
+        controllerPositions.text = dataString;
+    }
+}

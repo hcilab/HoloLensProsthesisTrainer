@@ -1,0 +1,2 @@
+this folder contains different python scripts that are used in this project.
+it also contains the foler which allows a python script to read data from the Vive Controller/tracker and display them. This is used as a server which opens a socket and sends this information to the HoloLens app.
