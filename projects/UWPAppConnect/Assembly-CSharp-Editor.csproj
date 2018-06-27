@@ -137,10 +137,10 @@
     <Compile Include="Assets\HoloToolkit\UX\Scripts\Editor\CompoundButtonSaveInterceptor.cs" />
     <Compile Include="Assets\HoloToolkit\UX\Scripts\Editor\KeyboardInputFieldEditor.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/ib222user/Documents/UWPAppConnect/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/ib222user/Desktop/HoloLensProsthesisTrainer/projects/UWPAppConnect/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/ib222user/Documents/UWPAppConnect/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/ib222user/Desktop/HoloLensProsthesisTrainer/projects/UWPAppConnect/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/MetroSupport/Tools/UnityEngine.AIModule.dll</HintPath>
@@ -377,10 +377,10 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="GLTFSerialization">
-      <HintPath>C:/Users/ib222user/Documents/UWPAppConnect/Assets/HoloToolkit/Utilities/Scripts/GLTF/Plugins/GLTFSerialization/GLTFSerialization.dll</HintPath>
+      <HintPath>C:/Users/ib222user/Desktop/HoloLensProsthesisTrainer/projects/UWPAppConnect/Assets/HoloToolkit/Utilities/Scripts/GLTF/Plugins/GLTFSerialization/GLTFSerialization.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/ib222user/Documents/UWPAppConnect/Assets/HoloToolkit/Utilities/Scripts/GLTF/Plugins/JsonNet/Newtonsoft.Json.dll</HintPath>
+      <HintPath>C:/Users/ib222user/Desktop/HoloLensProsthesisTrainer/projects/UWPAppConnect/Assets/HoloToolkit/Utilities/Scripts/GLTF/Plugins/JsonNet/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/ib222user/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.7/Editor/UnityEditor.Advertisements.dll</HintPath>
